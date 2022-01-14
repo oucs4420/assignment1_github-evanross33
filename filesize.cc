@@ -14,8 +14,8 @@ int main( int argc, char* argv[] )
 {
     // just to get you started, this is how to refer to the arguments that were passed
     ifstream in;
+    std::cout << "program: " << argv[0]<< '\n';
     for (int arg = 0; arg < argc; ++arg) {
-            std::cout << "argv[" << arg << "]: " << argv[arg] << '\n' ;
       if(arg > 0) {
         in.open(argv[arg]);
         if(in.is_open()) {
@@ -28,7 +28,7 @@ int main( int argc, char* argv[] )
               count = finalCheck(count, temp);
             }
           }
-          std::cout << count;
+          std::cout << argv[arg]<< ": " << count << '\n';
           in.close();
         }
         else {
