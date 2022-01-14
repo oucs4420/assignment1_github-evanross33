@@ -28,7 +28,7 @@ int main( int argc, char* argv[] )
               count = finalCheck(count, temp);
             }
           }
-          std::cout << argv[arg]<< ": " << count << '\n';
+          std::cout << " " << argv[arg]<< ": " << count << '\n';
           in.close();
         }
         else {
