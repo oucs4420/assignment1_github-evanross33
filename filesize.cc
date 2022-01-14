@@ -32,7 +32,7 @@ int main( int argc, char* argv[] )
           in.close();
         }
         else {
-          std::cout << -1;
+          std::cout << " " << argv[arg]<< ": " << -1 << '\n';
         }
       }
 }
