@@ -8,6 +8,8 @@ using namespace std;
 // input.3lines: 3
 // input.1line: 1
 
+int finalCheck(int count, std::string line);
+
 int main( int argc, char* argv[] )
 {
     // just to get you started, this is how to refer to the arguments that were passed
@@ -21,17 +23,28 @@ int main( int argc, char* argv[] )
           while(in.good()) {
             std::string temp;
             getline(in, temp);
-            count++;
+            if(in.good()){count++;}
+            else{
+              count = finalCheck(count, temp);
+            }
           }
           std::cout << count;
           in.close();
         }
         else {
-          std::cout << "-1";
+          std::cout << -1;
         }
       }
 }
-
-
     exit(0); // this means that the program executed correctly!
+}
+
+int finalCheck(int count, std::string line) {
+  if(line == "") {
+    return count;
+  }
+  else {
+    return count+1;
+  }
+
 }
